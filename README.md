@@ -10,7 +10,7 @@ Usage: dynodocker [arguments]
 
 "-o OUTPUT", "--to=OUTPUT", "Specifies file to write output to."
 
-"-h", "--help", "dynodocker #{VERSION} help"
+"-h", "--help", "dynodocker help"
 
 ## Requirements
 
