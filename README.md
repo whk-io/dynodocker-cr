@@ -1,27 +1,15 @@
-# dynodocker
+# DynoDocker-CR
 
-TODO: Write a description here
+A prototype framework for templating Dockerfiles with the ability to stamp fixed values, include external files, and render the template as needed.
 
-## Installation
+## Requirements
 
-TODO: Write installation instructions here
+To build: Crystal compiler
 
-## Usage
+### Important Files
 
-TODO: Write usage instructions here
+``` src/dynodocker.cr ``` : main applicaition
 
-## Development
+```Dockerfile.erb``` : main Dockerfile template
 
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/dynodocker/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [William Kirk](https://github.com/your-github-user) - creator and maintainer
+```settings.yml``` : place to assign static values outside of the template
