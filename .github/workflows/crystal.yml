@@ -26,8 +26,6 @@ jobs:
       run: crystal build src/dynodocker.cr --release
     - name: Create archive
       shell: bash
-      env:
-        ZIP_NAME: dynodocker
       run: |
         mkdir artifact
         mv dynodocker artifact/
@@ -36,11 +34,4 @@ jobs:
       with:
         name: dynodocker
         path: artifact
-    - name: Upload binaries to release
-      uses: ncipollo/release-action@v1
-      with:
-        name: dynodocker-latest
-        artifacts: "artifact/dynodocker"
-        tag: ${{ github.ref }}
-        token: ${{ secrets.GITHUB_TOKEN }}
 

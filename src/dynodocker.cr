@@ -4,7 +4,7 @@ require "option_parser"
 
 module Dynodocker
 
-  VERSION = "0.2.17"
+  VERSION = "0.2.18"
 
   init = false
   console = false
