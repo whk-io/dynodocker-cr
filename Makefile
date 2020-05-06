@@ -1,3 +1,4 @@
 build:
 	crystal build src/dynodocker.cr --release
-	./dynodocker
+	./dynodocker > Dockerfile
+	cat Dockerfile
