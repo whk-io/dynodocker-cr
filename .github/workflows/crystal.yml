@@ -36,11 +36,13 @@ jobs:
       with:
         name: dynodocker
         path: artifact
-    - name: Upload release asset
-      if: github.event.action == 'published'
-      uses: ncipollo/release-action@v1
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v1-release
       with:
-        artifacts: "release.tar.gz,artifact/dynodocker"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: artifact/dynodocker
+        asset_name: dynodocker-latest
+        tag: ${{ github.ref }}
+        overwrite: true
 
 
