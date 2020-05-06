@@ -2,6 +2,9 @@ name: Crystal CI
 
 on:
   push:
+    tags:
+    - '*'  
+  push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
@@ -34,4 +37,9 @@ jobs:
       with:
         name: dynodocker
         path: artifact
-
+    - name: Release binary
+      uses: ncipollo/release-action@v1
+      with:
+        draft: false
+        artifacts: "artifact/dynodocker"
+        token: ${{ secrets.GITHUB_TOKEN }}
