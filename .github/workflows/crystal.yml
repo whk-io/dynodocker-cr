@@ -41,5 +41,6 @@ jobs:
       with:
         name: dynodocker-latest
         artifacts: "artifact/dynodocker"
+        tag: ${{ github.ref }}
         token: ${{ secrets.GITHUB_TOKEN }}
 
