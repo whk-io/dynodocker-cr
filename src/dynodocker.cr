@@ -14,7 +14,7 @@ module Dynodocker
   OptionParser.parse do |parser|
     parser.banner = "Usage: dynodocker [arguments]"
     parser.on("-init", "--init", "Initialize settings and template.") { init = true }
-    parser.on("-c", "--console", "Output to console only") { console = true }
+    parser.on("-c", "--console", "Output to console") { console = true }
     parser.on("-o OUTPUT", "--to=OUTPUT", "Specifies file to write output to.") { |output| }
    #parser.on("-t TEMPLATE", "--to=TEMPLATE", "Specifies the template to process.") { |template| }
     parser.on("-h", "--help", "dynodocker #{VERSION} help") { puts parser }

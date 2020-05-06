@@ -6,7 +6,7 @@ Usage: dynodocker [arguments]
 
 "-init", "--init", "Initialize settings and template."
 
-"-c", "--console", "Output to console only"
+"-c", "--console", "Output to console"
 
 "-o OUTPUT", "--to=OUTPUT", "Specifies file to write output to."
 
