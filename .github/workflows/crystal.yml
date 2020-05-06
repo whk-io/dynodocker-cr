@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install OS dependencies
-      run: sudo apt-get install -y p7zip-full
+      run: apt-get install -y p7zip-full
     - name: Install dependencies
       run: shards install
     - name: Run tests
