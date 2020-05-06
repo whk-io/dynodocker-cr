@@ -1,0 +1,2 @@
+FROM <%= settings["source"] %> as upstream
+# ::include_filename prefix with ::
