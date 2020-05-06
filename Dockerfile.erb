@@ -1,0 +1,4 @@
+FROM <%= settings["source"] %> as upstream
+::content_static.inc
+RUN apt-get upgrade -y
+::content_generated.inc
