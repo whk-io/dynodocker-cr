@@ -1,5 +1,7 @@
 # DynoDocker-CR
 
+![Crystal CI](https://github.com/whk-io/dynodocker-cr/workflows/Crystal%20CI/badge.svg)
+
 A prototype framework for templating Dockerfiles with the ability to stamp fixed values, include external files, and render the template as needed.
 
 Usage: dynodocker [arguments]
