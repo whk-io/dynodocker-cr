@@ -24,13 +24,13 @@ jobs:
       run: crystal spec
     - name: Build release
       run: crystal build src/dynodocker.cr --release
-    # - name: Create dynodocker archive
-    #   shell: bash
-    #   env:
-    #     ZIP_NAME: dynodocker-linux
-    #   run: |
-    #     mkdir artifact
-    #     7z a artifact/${ZIP_NAME}.zip $(find . -name dynodocker)
+    - name: Create dynodocker archive
+      shell: bash
+      env:
+        ZIP_NAME: dynodocker-linux
+      run: |
+        mkdir artifact
+        7z a artifact/${ZIP_NAME}.zip $(find . -name dynodocker)
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
